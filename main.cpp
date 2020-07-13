@@ -5,9 +5,8 @@
 uint64_t change_byteorder(uint64_t n){
 	uint64_t result = 0;
 	
-	for(int i=0; i < MAX_BYTE; i ++){		
-        result |= (((n >> 8*i)&0xff) << 8*(MAX_BYTE-1-i));
-	}
+	for(int i=0; i < MAX_BYTE; i ++)		
+	        result |= (((n >> 8*i)&0xff) << 8*(MAX_BYTE-1-i));
 	
     return result;
 }
